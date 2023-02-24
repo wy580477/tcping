@@ -31,15 +31,31 @@ Approximate trip times:
 ### ping http
 
 ```bash
-> tcping -H hui.lu
-Ping http://hui.lu:80 - http is open - time=232.880173ms method=GET status=200 bytes=10317
-Ping http://hui.lu:80 - http is open - time=60.096446ms method=GET status=200 bytes=10317
-Ping http://hui.lu:80 - http is open - time=56.750403ms method=GET status=200 bytes=10317
-Ping http://hui.lu:80 - http is open - time=57.886907ms method=GET status=200 bytes=10317
+tcping http://microsoft.com
+Ping http://microsoft.com:80(20.112.52.29) connected - time=474.944472ms dns=19.575171ms status=301
+Ping http://microsoft.com:80(20.103.85.33) connected - time=554.906472ms dns=9.883287ms status=301
+Ping http://microsoft.com:80(20.81.111.85) connected - time=548.337763ms dns=10.241747ms status=301
+Ping http://microsoft.com:80(20.53.203.50) connected - time=419.761726ms dns=11.08323ms status=301
 
-Ping statistics http://hui.lu:80
-	4 probes sent.
-	4 successful, 0 failed.
+Ping statistics http://microsoft.com:80
+        4 probes sent.
+        4 successful, 0 failed.
 Approximate trip times:
-	Minimum = 56.750403ms, Maximum = 232.880173ms, Average = 101.903482ms
+        Minimum = 419.761726ms, Maximum = 554.906472ms, Average = 499.487608ms
+```
+
+### ping https
+
+```bash
+tcping https://microsoft.com
+Ping https://microsoft.com:443(20.84.181.62) connected - time=794.45726ms dns=8.955196ms status=301
+Ping https://microsoft.com:443(20.81.111.85) connected - time=795.754879ms dns=8.816674ms status=301
+Ping https://microsoft.com:443(20.81.111.85) connected - time=812.379029ms dns=10.356469ms status=301
+Ping https://microsoft.com:443(20.84.181.62) connected - time=710.339939ms dns=9.642587ms status=301
+
+Ping statistics https://microsoft.com:443
+        4 probes sent.
+        4 successful, 0 failed.
+Approximate trip times:
+        Minimum = 710.339939ms, Maximum = 812.379029ms, Average = 778.232776ms
 ```
